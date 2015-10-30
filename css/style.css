@@ -1,0 +1,27 @@
+img {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+.notes{
+	font-size: 12px;
+}
+
+.signeeInfo{
+	margin-top: 2em;
+}
+.signee{
+	width: 22em;
+}
+.box{
+	margin-bottom: 2em;
+}
+
+.box2{
+	margin-top: 20px;
+}
+
+.displayTable{
+	font-size: 20px;
+	text-align:center;		
+}
