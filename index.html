@@ -24,16 +24,16 @@
           <div class="container">
               <div class="box">
                   <img src="Images/BACI-Logo-large.png" class="img-responsive" alt="baci logo" height="90" width="90">
-                  <h3>BURNABY ASSOCIATION FOR COMMUNITY INCLUSION</h3>
-                  <h1>PERSONAL VEHICLE USAGE LOG</h1>
+                  <h3 class="forprint3">BURNABY ASSOCIATION FOR COMMUNITY INCLUSION</h3>
+                  <div class="tittleBox"><h1 class="forprint4">PERSONAL VEHICLE USAGE LOG</h1></div>
                   
               </div>
-              <p class="notes">This is a webform and the data will not be saved. Once you have finished entering the numbers, please print directly as a webpage or print as a PDF. This form is to be updated regularly as more features will be added, please report all issues to tech.support@gobaci.com. </p>
-              <p class="notes">For information on how to print as PDF, please go to <a href="http://www.guidingtech.com/7566/chrome-print-to-pdf-convert-webpage-to-pdf/">Here</a></p>
+              <p class="notes frontnotes">This is a webform and the data will not be saved. Once you have finished entering the numbers, please print directly as a webpage or print as a PDF. This form is to be updated regularly as more features will be added, please report all issues to tech.support@gobaci.com. </p>
+              <p class="notes frontnotes">For information on how to print as PDF, please go to <a href="http://www.guidingtech.com/7566/chrome-print-to-pdf-convert-webpage-to-pdf/">Here</a></p>
         
-              <div >
+          
 
-              </div>
+
 
               <div >
                   <table class="table table-bordered">
@@ -42,7 +42,14 @@
                       </tr></thead>
                       <!-- Todo: Generate table body -->
                       <tbody>
-                           <tr >
+                           <tr class="active">
+                              <td>e.g. 10/16/2015</td>
+                              <td>e.g. 160000</td>
+                              <td>e.g. 160035</td>
+                              <td>e.g. 35</td>
+                              <td>e.g. Home visit, Cumberland</td>
+                          </tr>
+                           <tr>
                               <td><input class="forprint" data-bind = 'value:date1'/></td>
                               <td><input class="forprint" data-bind = "value:mStart1"/></td>
                               <td><input class="forprint" data-bind = "value:mEnd1"/></td>
@@ -326,8 +333,8 @@
 
 
              <div class="signeeInfo">
-                  <p class="col-md-6"><strong>Program:</strong> <input class="signee" data-bind = 'value:program'/></p>
-                  <p class="col-md-6"><strong>Month&Year:</strong> <input  class="signee" data-bind = 'value:monthyear'/></p>
+                  <p class="col-md-6 box3"><strong>Program:</strong> <input class="signee" data-bind = 'value:program'/></p>
+                  <p class="col-md-6 box3"><strong>Month&Year:</strong> <input  class="signee" data-bind = 'value:monthyear'/></p>
 
                   <div class="col-md-6 box2">
                       <p><strong>Please Pay:</strong> <input  class="signee" data-bind = 'value:payto'/></p>
@@ -346,7 +353,7 @@
                   date:'10/16/2015',
                   mStart:ko.observable('150000'),
                   mEnd:ko.observable('150050'),
-                  description:'This is just an example and will be NOT computed',
+                  description:'This is just an example',
 
                   date1:'',
                   mStart1:ko.observable(''),
