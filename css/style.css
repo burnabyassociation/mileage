@@ -1,10 +1,28 @@
 img {
     float: right;
-    margin: 0 0 10px 10px;
 }
 
 .notes{
 	font-size: 12px;
+}
+
+.forprint{
+	width: 100%;
+	margin:none;
+	border-style:none;
+}
+.forprint2{
+	color: #C1C1C1;
+	text-align: center;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style:solid;
+	border-bottom-width: 1px !important;
+}
+
+.displayRow{
+		padding-left: 20px !important;			
 }
 
 .signeeInfo{
@@ -18,7 +36,14 @@ img {
 }
 
 .box2{
-	margin-top: 20px;
+	float:left;
+}
+.box3{
+	float:right;
+	text-align: right;
+}
+.box4{
+	margin-top: 15px;
 }
 
 .displayTable{
