@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type='text/javascript' src='Scripts/knockout-3.3.0.js'></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/print.css">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Mileage Form</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+          <div class="container">
+              <div class="box">
+                  <img src="Images/BACI-Logo-large.png" class="img-responsive" alt="baci logo" height="90" width="90">
+                  <h3 class="forprint3">BURNABY ASSOCIATION FOR COMMUNITY INCLUSION</h3>
+                  <div class="tittleBox"><h1 class="forprint4">PERSONAL VEHICLE USAGE LOG</h1></div>
+                  
+              </div>
+              <p class="notes frontnotes">This is a webform and the data will not be saved. Once you have finished entering the numbers, please print directly as a webpage or print as a PDF. This form is to be updated regularly as more features will be added, please report all issues to tech.support@gobaci.com. For information on how to print as PDF, please go to <a href="http://www.guidingtech.com/7566/chrome-print-to-pdf-convert-webpage-to-pdf/">Here.</a> Please only print page 2 when you need it.</p>
+
+      
+
+
+              <div class="signeeInfo">
+                  <div class="col-md-6 box2">
+                      <p><strong>Programme:</strong> <input class="signee" data-bind = 'value:program'/></p>
+                       <p class="forprint5"><strong>Please Pay:</strong> <input  class="signee" data-bind = 'value:payto'/></p>
+                      <p class="notes">(Please print employee name clearly)</p> 
+                  </div>
+
+                  <div class="col-md-6 box3">
+                      <p><strong>Month&Year:</strong> <input  class="signee" data-bind = 'value:monthyear'/></p>
+                       <p class="forprint5"><strong>Approved by:</strong> <input class="signee forprint2" data-bind = 'value:approvedby'> </p>
+                      <p class="notes">(For Manager/Coordinator/Supervisor ONLY)</p>     
+                  </div>
+              </div>
+
+
+              <div >
+                  <table class="table table-bordered">
+                      <thead><tr class="active">
+                          <th>DATE</th><th>STARTING MILEAGE</th><th>ENDING MILEAGE</th><th>KM'S DRIVEN</th><th>DESTINATION AND PURPOSE OF TRIP</th>
+                      </tr></thead>
+                      <!-- Todo: Generate table body -->
+                      <tbody>
+                           <tr>
+                              <td>e.g. 10/16/2015</td>
+                              <td>e.g. 160000</td>
+                              <td>e.g. 160035</td>
+                              <td>e.g. 35</td>
+                              <td>e.g. Home visit, Cumberland</td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date1'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart1"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd1"/></td>
+                              <td><span data-bind = "text:mDriven1"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description1"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date2'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart2"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd2"/></td>
+                              <td><span data-bind = "text:mDriven2"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description2"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date3'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart3"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd3"/></td>
+                              <td><span data-bind = "text:mDriven3"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description3"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date4'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart4"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd4"/></td>
+                              <td><span data-bind = "text:mDriven4"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description4"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date5'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart5"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd5"/></td>
+                              <td><span data-bind = "text:mDriven5"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description5"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date6'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart6"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd6"/></td>
+                              <td><span data-bind = "text:mDriven6"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description6"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date7'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart7"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd7"/></td>
+                              <td><span data-bind = "text:mDriven7"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description7"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date8'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart8"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd8"/></td>
+                              <td><span data-bind = "text:mDriven8"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description8"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date9'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart9"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd9"/></td>
+                              <td><span data-bind = "text:mDriven9"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description9"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date10'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart10"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd10"/></td>
+                              <td><span data-bind = "text:mDriven10"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description10"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date11'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart11"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd11"/></td>
+                              <td><span data-bind = "text:mDriven11"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description11"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date12'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart12"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd12"/></td>
+                              <td><span data-bind = "text:mDriven12"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description12"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date13'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart13"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd13"/></td>
+                              <td><span data-bind = "text:mDriven13"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description13"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date14'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart14"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd14"/></td>
+                              <td><span data-bind = "text:mDriven14"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description14"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date15'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart15"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd15"/></td>
+                              <td><span data-bind = "text:mDriven15"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description15"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date16'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart16"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd16"/></td>
+                              <td><span data-bind = "text:mDriven16"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description16"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date17'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart17"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd17"/></td>
+                              <td><span data-bind = "text:mDriven17"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description17"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date18'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart18"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd18"/></td>
+                              <td><span data-bind = "text:mDriven18"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description18"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date19'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart19"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd19"/></td>
+                              <td><span data-bind = "text:mDriven19"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description19"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date20'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart20"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd20"/></td>
+                              <td><span data-bind = "text:mDriven20"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description20"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date21'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart21"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd21"/></td>
+                              <td><span data-bind = "text:mDriven21"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description21"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date22'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart22"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd22"/></td>
+                              <td><span data-bind = "text:mDriven22"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description22"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date23'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart23"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd23"/></td>
+                              <td><span data-bind = "text:mDriven23"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description23"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date24'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart24"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd24"/></td>
+                              <td><span data-bind = "text:mDriven24"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description24"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date25'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart25"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd25"/></td>
+                              <td><span data-bind = "text:mDriven25"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description25"/></td>
+                          </tr> 
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date26'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart26"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd26"/></td>
+                              <td><span data-bind = "text:mDriven26"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description26"/></td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date27'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart27"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd27"/></td>
+                              <td><span data-bind = "text:mDriven27"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description27"/></td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date28'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart28"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd28"/></td>
+                              <td><span data-bind = "text:mDriven28"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description28"/></td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date29'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart29"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd29"/></td>
+                              <td><span data-bind = "text:mDriven29"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description29"/></td>
+                          </tr>
+
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date30'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart30"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd30"/></td>
+                              <td><span data-bind = "text:mDriven30"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description30"/></td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date31'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart31"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd31"/></td>
+                              <td><span data-bind = "text:mDriven31"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description31"/></td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date32'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart32"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd32"/></td>
+                              <td><span data-bind = "text:mDriven32"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description32"/></td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date33'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart33"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd33"/></td>
+                              <td><span data-bind = "text:mDriven33"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description33"/></td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date34'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart34"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd34"/></td>
+                              <td><span data-bind = "text:mDriven34"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description34"/></td>
+                          </tr>
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date35'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart35"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd35"/></td>
+                              <td><span data-bind = "text:mDriven35"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description35"/></td>
+                          </tr>
+                          
+                          <tr>
+                              <td><input class="forprint" data-bind = 'value:date36'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart36"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd36"/></td>
+                              <td><span data-bind = "text:mDriven36"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description36"/></td>
+                          </tr>
+                           <tr>
+                              <td><input class="forprint" data-bind = 'value:date37'/></td>
+                              <td><input class="forprint" data-bind = "value:mStart37"/></td>
+                              <td><input class="forprint" data-bind = "value:mEnd37"/></td>
+                              <td><span data-bind = "text:mDriven37"></td>
+                              <td><input class= "col-md-12 forprint" data-bind = "value:description37"/></td>
+                          </tr>
+                   
+                           <tr class="active">
+                              <td></td>
+                              <td></td>
+                              <td><strong>Total KM's driven:</strong></td>
+                              <td><strong><span data-bind = "text:totalmDriven"></strong></td>
+                              <td></td>
+                          </tr>
+
+                      </tbody>
+                  </table>
+              </div>  
+
+
+
+              <p class="notes backnotes">This form is for your personal vehicle usage only. Only include one programme per form. If you have mileage for multiple programmes you must submit a separate form for each programme.</p>
+
+              <table class="table table-bordered displayTable">
+                      <thead><tr class="active">
+                          <th class="displayRow">Total amount to be reimbursed:</th>
+                          <th class="displayRow"><span data-bind = "text:reimburseDisplay"></span><span data-bind = "text:gasPaid"><span></th>
+                      </tr></thead>
+              </table>
+
+              <script>
+
+              var obj={
+                  date:'10/16/2015',
+                  mStart:ko.observable('150000'),
+                  mEnd:ko.observable('150050'),
+                  description:'This is just an example',
+
+                  date1:'',
+                  mStart1:ko.observable(''),
+                  mEnd1:ko.observable(''),
+                  description1:'',
+
+                  date2:'',
+                  mStart2:ko.observable(''),
+                  mEnd2:ko.observable(''),
+                  description2:'',
+
+                  date3:'',
+                  mStart3:ko.observable(''),
+                  mEnd3:ko.observable(''),
+                  description3:'',
+
+                  date4:'',
+                  mStart4:ko.observable(''),
+                  mEnd4:ko.observable(''),
+                  description4:'',
+
+                  date5:'',
+                  mStart5:ko.observable(''),
+                  mEnd5:ko.observable(''),
+                  description5:'',
+
+                  date6:'',
+                  mStart6:ko.observable(''),
+                  mEnd6:ko.observable(''),
+                  description6:'',
+
+                  date7:'',
+                  mStart7:ko.observable(''),
+                  mEnd7:ko.observable(''),
+                  description7:'',
+
+                  date8:'',
+                  mStart8:ko.observable(''),
+                  mEnd8:ko.observable(''),
+                  description8:'',
+
+                  date9:'',
+                  mStart9:ko.observable(''),
+                  mEnd9:ko.observable(''),
+                  description9:'',
+
+                  date10:'',
+                  mStart10:ko.observable(''),
+                  mEnd10:ko.observable(''),
+                  description10:'',
+
+                  date11:'',
+                  mStart11:ko.observable(''),
+                  mEnd11:ko.observable(''),
+                  description11:'',
+
+                  date12:'',
+                  mStart12:ko.observable(''),
+                  mEnd12:ko.observable(''),
+                  description12:'',
+
+                  date13:'',
+                  mStart13:ko.observable(''),
+                  mEnd13:ko.observable(''),
+                  description13:'',
+
+                  date14:'',
+                  mStart14:ko.observable(''),
+                  mEnd14:ko.observable(''),
+                  description14:'',
+                  
+                  date15:'',
+                  mStart15:ko.observable(''),
+                  mEnd15:ko.observable(''),
+                  description15:'',
+                  
+                  date16:'',
+                  mStart16:ko.observable(''),
+                  mEnd16:ko.observable(''),
+                  description16:'',
+                  
+                  date17:'',
+                  mStart17:ko.observable(''),
+                  mEnd17:ko.observable(''),
+                  description17:'',
+                  
+                  date18:'',
+                  mStart18:ko.observable(''),
+                  mEnd18:ko.observable(''),
+                  description18:'',
+
+                  date19:'',
+                  mStart19:ko.observable(''),
+                  mEnd19:ko.observable(''),
+                  description19:'',
+
+                  date20:'',
+                  mStart20:ko.observable(''),
+                  mEnd20:ko.observable(''),
+                  description20:'',
+
+                  date21:'',
+                  mStart21:ko.observable(''),
+                  mEnd21:ko.observable(''),
+                  description21:'',
+
+                  date22:'',
+                  mStart22:ko.observable(''),
+                  mEnd22:ko.observable(''),
+                  description22:'',
+
+                  date23:'',
+                  mStart23:ko.observable(''),
+                  mEnd23:ko.observable(''),
+                  description23:'',
+
+                  date24:'',
+                  mStart24:ko.observable(''),
+                  mEnd24:ko.observable(''),
+                  description24:'',
+
+                  date25:'',
+                  mStart25:ko.observable(''),
+                  mEnd25:ko.observable(''),
+                  description25:'',
+
+                  date26:'',
+                  mStart26:ko.observable(''),
+                  mEnd26:ko.observable(''),
+                  description26:'',
+
+                  date27:'',
+                  mStart27:ko.observable(''),
+                  mEnd27:ko.observable(''),
+                  description27:'',
+
+                  date28:'',
+                  mStart28:ko.observable(''),
+                  mEnd28:ko.observable(''),
+                  description28:'',
+
+                  date29:'',
+                  mStart29:ko.observable(''),
+                  mEnd29:ko.observable(''),
+                  description29:'',
+
+                  date30:'',
+                  mStart30:ko.observable(''),
+                  mEnd30:ko.observable(''),
+                  description30:'',
+
+                  date31:'',
+                  mStart31:ko.observable(''),
+                  mEnd31:ko.observable(''),
+                  description31:'',
+
+                  date32:'',
+                  mStart32:ko.observable(''),
+                  mEnd32:ko.observable(''),
+                  description32:'',
+
+                  date33:'',
+                  mStart33:ko.observable(''),
+                  mEnd33:ko.observable(''),
+                  description33:'',
+
+                  date34:'',
+                  mStart34:ko.observable(''),
+                  mEnd34:ko.observable(''),
+                  description34:'',
+
+                  date35:'',
+                  mStart35:ko.observable(''),
+                  mEnd35:ko.observable(''),
+                  description35:'',
+
+                  date36:'',
+                  mStart36:ko.observable(''),
+                  mEnd36:ko.observable(''),
+                  description36:'',
+
+                  date37:'',
+                  mStart37:ko.observable(''),
+                  mEnd37:ko.observable(''),
+                  description37:'',       
+
+                  rate: ko.observable(0.45),
+
+                  program:'',
+                  monthyear:'',
+                  payto:'',
+                  approvedby:'PLEASE DO NOT FILL HERE',
+              };
+
+              obj.mDriven = ko.computed(function(){
+                  return obj.mEnd() - obj.mStart()
+              })
+              obj.mDriven1 = ko.computed(function(){
+                  return obj.mEnd1() - obj.mStart1()
+              })
+              obj.mDriven2 = ko.computed(function(){
+                  return obj.mEnd2() - obj.mStart2()
+              })
+              obj.mDriven3 = ko.computed(function(){
+                  return obj.mEnd3() - obj.mStart3()
+              })
+              obj.mDriven4 = ko.computed(function(){
+                  return obj.mEnd4() - obj.mStart4()
+              })
+              obj.mDriven5 = ko.computed(function(){
+                  return obj.mEnd5() - obj.mStart5()
+              })
+              obj.mDriven6 = ko.computed(function(){
+                  return obj.mEnd6() - obj.mStart6()
+              })
+              obj.mDriven7 = ko.computed(function(){
+                  return obj.mEnd7() - obj.mStart7()
+              })
+              obj.mDriven8 = ko.computed(function(){
+                  return obj.mEnd8() - obj.mStart8()
+              })
+              obj.mDriven9 = ko.computed(function(){
+                  return obj.mEnd9() - obj.mStart9()
+              })
+              obj.mDriven10 = ko.computed(function(){
+                  return obj.mEnd10() - obj.mStart10()
+              })
+              obj.mDriven11 = ko.computed(function(){
+                  return obj.mEnd11() - obj.mStart11()
+              })
+              obj.mDriven12 = ko.computed(function(){
+                  return obj.mEnd12() - obj.mStart12()
+              })
+              obj.mDriven13 = ko.computed(function(){
+                  return obj.mEnd13() - obj.mStart13()
+              })
+              obj.mDriven14 = ko.computed(function(){
+                  return obj.mEnd14() - obj.mStart14()
+              })
+              obj.mDriven15 = ko.computed(function(){
+                  return obj.mEnd15() - obj.mStart15()
+              })
+              obj.mDriven16 = ko.computed(function(){
+                  return obj.mEnd16() - obj.mStart16()
+              })
+              obj.mDriven17 = ko.computed(function(){
+                  return obj.mEnd17() - obj.mStart17()
+              })
+              obj.mDriven18 = ko.computed(function(){
+                  return obj.mEnd18() - obj.mStart18()
+              })
+              obj.mDriven19 = ko.computed(function(){
+                  return obj.mEnd19() - obj.mStart19()
+              })
+              obj.mDriven20 = ko.computed(function(){
+                  return obj.mEnd20() - obj.mStart20()
+              })
+              obj.mDriven21 = ko.computed(function(){
+                  return obj.mEnd21() - obj.mStart21()
+              })
+              obj.mDriven22 = ko.computed(function(){
+                  return obj.mEnd22() - obj.mStart22()
+              })
+              obj.mDriven23 = ko.computed(function(){
+                  return obj.mEnd23() - obj.mStart23()
+              })
+              obj.mDriven24 = ko.computed(function(){
+                  return obj.mEnd24() - obj.mStart24()
+              })
+              obj.mDriven25 = ko.computed(function(){
+                  return obj.mEnd25() - obj.mStart25()
+              })
+              obj.mDriven26 = ko.computed(function(){
+                  return obj.mEnd26() - obj.mStart26()
+              })
+              obj.mDriven27 = ko.computed(function(){
+                  return obj.mEnd27() - obj.mStart27()
+              })
+              obj.mDriven28 = ko.computed(function(){
+                  return obj.mEnd28() - obj.mStart28()
+              })
+              obj.mDriven29 = ko.computed(function(){
+                  return obj.mEnd29() - obj.mStart29()
+              })
+              obj.mDriven30 = ko.computed(function(){
+                  return obj.mEnd30() - obj.mStart30()
+              })
+              obj.mDriven31 = ko.computed(function(){
+                  return obj.mEnd31() - obj.mStart31()
+              })
+              obj.mDriven32 = ko.computed(function(){
+                  return obj.mEnd32() - obj.mStart32()
+              })
+              obj.mDriven33 = ko.computed(function(){
+                  return obj.mEnd33() - obj.mStart33()
+              })
+              obj.mDriven34 = ko.computed(function(){
+                  return obj.mEnd34() - obj.mStart34()
+              })
+              obj.mDriven35 = ko.computed(function(){
+                  return obj.mEnd35() - obj.mStart35()
+              })
+              obj.mDriven36 = ko.computed(function(){
+                  return obj.mEnd36() - obj.mStart36()
+              })
+              obj.mDriven37 = ko.computed(function(){
+                  return obj.mEnd37() - obj.mStart37()
+              })
+             
+
+
+              obj.totalmDriven = ko.computed(function(){
+                  return obj.mDriven1() + obj.mDriven2() + obj.mDriven3() + obj.mDriven4()  + obj.mDriven5() + obj.mDriven6()  + obj.mDriven7() + obj.mDriven8() + obj.mDriven9() + obj.mDriven10() + obj.mDriven11() + obj.mDriven12() + obj.mDriven13() + obj.mDriven14() + obj.mDriven15() + obj.mDriven16() + obj.mDriven17() + obj.mDriven18()  + obj.mDriven19() + obj.mDriven20() + obj.mDriven21() + obj.mDriven22() + obj.mDriven23() + obj.mDriven24() + obj.mDriven25() + obj.mDriven26() + obj.mDriven27() + obj.mDriven28() + obj.mDriven29() + obj.mDriven30() + obj.mDriven31() + obj.mDriven32() + obj.mDriven33() + obj.mDriven34() + obj.mDriven35() + obj.mDriven36() + obj.mDriven37()
+                })
+
+
+
+              obj.reimburse = ko.computed(function(){
+                return obj.totalmDriven() * obj.rate() 
+              })
+
+              obj.reimburseDisplay = ko.computed(function(){
+                return obj.totalmDriven() + ' KM X $ 0.45  =  $' 
+              })
+
+           
+
+              ko.extenders.numeric = function(target, precision) {
+                  var result = ko.computed({
+                      read: function() {
+                          return target().toFixed(precision); 
+                      },
+                      write: target 
+                  });
+
+                  result.raw = target;
+                  return result;
+              };
+              
+              var gasPaid = obj.reimburse.extend({numeric: 2});
+
+              ko.applyBindings(obj);
+              </script>
+              <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+              <!-- Include all compiled plugins (below), or include individual files as needed -->
+              <script src="js/bootstrap.min.js"></script>
+        </div>          
+    </body>
+</html>
