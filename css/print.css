@@ -50,6 +50,9 @@
 		margin:none;
 		border-style:none;
 	}
+	.forprint1{
+		width:100px !important;
+	}
 	.forprint2{
 		color: transparent !important;
 		border-top-style: none;
@@ -96,12 +99,11 @@
 
 
 	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
-		padding-left: 2px !important;
-		padding-top: 0 !important;
-		padding-bottom: 0 !important;
-		padding-right: 0 !important;
+		padding:0 !important;
+		
 		height:13px !important;
 		text-align: center !important;
+		border-style:solid;
 	}
  
 
