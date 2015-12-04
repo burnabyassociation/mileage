@@ -78,8 +78,13 @@
 		margin-bottom: 2px;	
 
 	}
+
+	.printRow{
+		width: 400px !important;
+	}
+
 	.displayTable{
-		margin-bottom: 10px !important;		
+		margin-bottom: 5px !important;		
 	}
 
 	.displayRow{
